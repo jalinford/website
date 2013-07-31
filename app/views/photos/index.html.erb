@@ -11,7 +11,7 @@
 			<div class="large-11 columns">
 				<div class="row">
 			  		<ul class="large-block-grid-4 small-block-grid-2">
-			  			<% slideshow.photos.order("date DESC").first(4).each do |photo| %>
+			  			<% slideshow.photos.order("priority DESC").first(4).each do |photo| %>
 				    		<li><%= image_tag photo.photo_url(:thumb).to_s %>
 				    		<div class="panel">
 				    			<h6><%= photo.title %></h6>

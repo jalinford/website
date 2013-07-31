@@ -8,7 +8,7 @@ class MainController < ApplicationController
     @piece = Piece.where(featured: true).order("priority DESC").first
     begin
       @latest_blog_posts = RSS::Parser.parse(open('http://andrewlinford.wordpress.com/feed/').read, false).items[0...5]
-  rescue 
+    rescue 
       @latest_blog_posts = nil
     end
   end

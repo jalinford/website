@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 	def index
-		@photos = Photo.order("date DESC")
+		@title = "Photos"
+		@photos = Photo.order("priority DESC")
 		@slideshows = Slideshow.order("priority DESC")
 		@tags = Tag.where(featured: true).order("title ASC")
   		@featured_slideshows = Slideshow.where(featured: true).order("title ASC")
@@ -8,7 +9,8 @@ class PhotosController < ApplicationController
 
 	def slideshow
 		@slideshow = Slideshow.find_by_title(params[:title])
-		@photos = @slideshow.photos
+		@title = @slideshow.title
+		@photos = @slideshow.photos.order("priority DESC")
 		@tags = Tag.where(featured: true).order("title ASC")
   		@featured_slideshows = Slideshow.where(featured: true).order("title ASC")
 	end	
