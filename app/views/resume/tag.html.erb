@@ -1,2 +1,25 @@
-<h1>Resume#tag</h1>
-<p>Find me in app/views/resume/tag.html.erb</p>
+<%= render 'sub_nav' %>
+<%= render 'header' %>
+
+<% if @tags_displayed.count == 1 %>
+	<% tag = @tags_displayed.first %>
+	<% unless tag.objective == '' %>
+		<h4>Objective</h4>
+		<p><%= tag.objective %></p>
+	<% end %>
+
+	<% unless tag.summary == '' %>
+		<h4>Summary</h4>
+		<p><%= tag.summary %></p>
+	<% end %>
+<% end %>
+
+<% all_tag_categories(@tags_displayed).each do |category| %>
+	<%= render 'category', :category => category %>
+<% end %>
+
+
+<% all_tag_footers(@tags_displayed).each do |footer| %>
+	<%= render 'footer', :footer => footer %>
+<% end %>
+

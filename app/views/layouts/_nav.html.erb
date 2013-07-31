@@ -12,10 +12,22 @@
       <li class="divider"></li>
       <li><a href="http://andrewlinford.wordpress.com/">Blog</a></li>
       <li class="divider"></li>
-      <li><%= link_to "Resume", resume_path %></li>
+      <li class="has-dropdown"><a href="#">Resume</a>
+        <ul class="dropdown">
+          <li><%= link_to "General Information", resume_path %></li>
+          <% unless @tags.nil? || @tags.count == 0 %>
+            <li><label>Featured Resumes</label></li>
+            <% @tags.each do |tag| %>
+              <li><%= link_to tag.title, tag_path(:title => tag.title) %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </li>
     </ul>
   </section>
 </nav>
+
+
 
 <% if @title == "Home" %>
   <header class="show-for-medium-up" id="homepage">
