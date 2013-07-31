@@ -4,23 +4,36 @@
             <!-- Shows -->
             <div class="large-4 columns">
               <h2>Latest News</h2>
-                <h3>Current Plans</h3>
-                <div class="row">
-                  <div class="small-1 column">
+                <% if @news.nil? %>
+                  <h3>Current Plans</h3>
+                  <div class="row">
+                    <div class="small-1 column">
+                    </div>
+                    <div class="small-11 columns">
+                      <h5 class="subheader">Andrew will be a member of the Coro Fellows in Public Afairs Class of 2013</h5><hr>
+                    </div>
                   </div>
-                  <div class="small-11 columns">
-                    <h5 class="subheader">Andrew will be a member of the Coro Fellows in Public Afairs Class of 2013</h5><hr>
-                  </div>
-                </div>
 
-                <h3>Other news</h3>
-                <div class="row">
-                  <div class="small-1 column">
+                  <h3>Other news</h3>
+                  <div class="row">
+                    <div class="small-1 column">
+                    </div>
+                    <div class="small-11 columns">
+                      <h5 class="subheader">Andrew has been working hard on learning Ruby on Rails</h5><hr>
+                    </div>
                   </div>
-                  <div class="small-11 columns">
-                    <h5 class="subheader">Andrew has been working hard on learning Ruby on Rails</h5><hr>
-                  </div>
-                </div>
+                <% else %>
+                  <% @news.each do |news| %>
+                    <h3><%= news.title %></h3>
+                    <div class="row">
+                      <div class="small-1 column">
+                      </div>
+                      <div class="small-11 columns">
+                        <h5 class="subheader"><%= News.first.summary.html_safe %></h5><hr>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
               </div>
             <!-- End Shows -->
 
