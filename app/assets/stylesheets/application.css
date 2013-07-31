@@ -10,6 +10,7 @@
  *
 
  *= require foundation_and_overrides
+ *= require active_admin/editor/wysiwyg
  *= require layout
  *= require_self
  */

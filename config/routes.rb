@@ -1,5 +1,9 @@
 Website::Application.routes.draw do
 
+  get "music/index"
+
+  get "music/music"
+
   root :to => 'main#index'
   match 'resume', :to => "resume#index"
   get '/resume/*title', :to => "resume#tag", as: 'tag'
@@ -9,6 +13,8 @@ Website::Application.routes.draw do
   resources :photos do
     resource :slideshow
   end
+
+  match 'music', :to => "music#index"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

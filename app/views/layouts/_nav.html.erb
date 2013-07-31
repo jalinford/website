@@ -12,7 +12,7 @@
       <li class="divider"></li>
       <li><a href="http://andrewlinford.wordpress.com/">Blog</a></li>
       <li class="divider"></li>
-      <li class="has-dropdown"><a href="#">Resume</a>
+      <li class="has-dropdown"><%= link_to "Resume", resume_path %>
         <ul class="dropdown">
           <li><%= link_to "General Information", resume_path %></li>
           <% unless @tags.nil? || @tags.count == 0 %>
@@ -24,7 +24,7 @@
         </ul>
       </li>
       <li class="divider"></li>
-       <li class="has-dropdown"><a href="#">Photos</a>
+       <li class="has-dropdown"><%= link_to "Photos", photos_path %>
         <ul class="dropdown">
           <li><%= link_to "All Photos", photos_path %></li>
           <li><label>Featured Slideshows</label></li>
@@ -35,6 +35,8 @@
           <% end %>
         </ul>
       </li>
+      <li class="divider"></li>
+      <li><%= link_to "Music", music_path %></li>
     </ul>
   </section>
 </nav>
