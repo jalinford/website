@@ -1,2 +1,28 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
+<h1>All Photos</h1>
+
+<% if @photos.nil? || @photos.count == 0 %>
+	<p>A collection of photos will appear here when they are uploaded</p>
+<% else %>
+	<% @slideshows.each do |slideshow| %>
+		<% if slideshow.photos.count > 0 %>
+			<div class="row">
+				<h2><%= slideshow.title %> Photos</h2>
+			</div>
+			<div class="large-11 columns">
+				<div class="row">
+			  		<ul class="large-block-grid-4 small-block-grid-2">
+			  			<% slideshow.photos.order("date DESC").first(4).each do |photo| %>
+				    		<li><%= image_tag photo.photo_url(:thumb).to_s %>
+				    		<div class="panel">
+				    			<h6><%= photo.title %></h6>
+				    		</div></li>
+						<% end %>
+					</ul>
+				</div>
+				<div class="row">
+					<a href="<%= slideshow_path(:title => slideshow.title) %>" class="button round">View <%= slideshow.title %> Photos as Slideshow</a>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>

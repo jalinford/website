@@ -1,2 +1,17 @@
-<h1>Photos#slideshow</h1>
-<p>Find me in app/views/photos/slideshow.html.erb</p>
+<h1><%= @slideshow.title %></h1>
+<p><%= @slideshow.description %></p>
+<div class="row">
+  <div class="small-11 small-centered columns">
+<div class="slideshow-wrapper">
+  <div class="preloader"></div>
+<ul data-orbit>
+	<% @photos.order("date DESC").each do |photo| %>
+  <li>
+    <%= image_tag photo.photo_url(:slideshow).to_s %>
+    <div class="orbit-caption"><%= photo.title %><%= ": " + photo.description  unless photo.description == "" %></div>
+  </li>
+  <% end %>
+</ul>
+</div>
+</div>
+</div>

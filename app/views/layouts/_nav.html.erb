@@ -24,7 +24,17 @@
         </ul>
       </li>
       <li class="divider"></li>
-      <li><%= link_to "Photos", photos_path %></li>
+       <li class="has-dropdown"><a href="#">Photos</a>
+        <ul class="dropdown">
+          <li><%= link_to "All Photos", photos_path %></li>
+          <li><label>Featured Slideshows</label></li>
+          <% unless @featured_slideshows.nil? || @featured_slideshows == 0 %>
+            <% @featured_slideshows.each do |slideshow| %>
+              <li><%= link_to slideshow.title, slideshow_path(:title => slideshow.title) %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </li>
     </ul>
   </section>
 </nav>

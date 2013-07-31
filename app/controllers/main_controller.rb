@@ -3,7 +3,7 @@ require 'open-uri'
 class MainController < ApplicationController
   def index
     @tags = Tag.where(featured: true).order("title ASC")
-    #@featured_slideshows = Slideshow.where(featured: true).order("title ASC")
+    @featured_slideshows = Slideshow.where(featured: true).order("title ASC")
     @title = "Home"
     #@piece = Piece.where(featured: true).order("priority DESC").first
     begin

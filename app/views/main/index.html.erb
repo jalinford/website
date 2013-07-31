@@ -26,7 +26,15 @@
 
 
             <!-- Image -->
-
+            <div class="large-4 columns">
+              <h2>Featured Photo</h2>
+              <% unless Photo.first.nil? %>
+                <%= image_tag Photo.first.photo_url(:thumb).to_s %><br>
+              <% end %>
+              <br><%= link_to "More Photos", photos_path, :class=>"round button" %>
+              <h3>Other Resources</h3>
+              <%= link_to "Resumes", resume_path, :class=>"round button" %>
+            </div>
 
 
             <!-- End Image -->
