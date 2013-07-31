@@ -33,7 +33,7 @@
               <% end %>
               <br><%= link_to "More Photos", photos_path, :class=>"round button" %>
               <h3>Other Resources</h3>
-              <%= link_to "Resumes", resume_path, :class=>"round button" %>
+              <%= link_to "Resumes", resume_path, :class=>"round button" %><%= link_to "Media", root_path, :class=>"round button" %>
             </div>
 
 
@@ -72,3 +72,44 @@
         </div>
       </div>
 
+
+<div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <!-- Shows -->
+            <div class="large-6 columns">
+              <h2>Recent Projects</h2>
+                <div class="row">
+                  <div class="small-1 column">
+                  </div>
+                  <div class="small-11 columns">
+                    <p>Andrew has been working hard at Discovership, a new web application for finding experiential-laerning opportunities</p>
+                  </div>
+                  <a href="#" class="button round">Find Out More</a>
+                </div>
+              </div>
+            <div class="large-6 columns">
+              <h2><%= link_to "Recent Music", music_path %></h2>
+                <% if @piece.nil? %>
+                  <div class="row">
+                    <div class="small-1 column">
+                    </div>
+                    <div class="small-11 columns">
+                      <p>Andrew has finished up work on a String Quartet that takes inspiration from national anthems across the world.</p>
+                    </div>
+                    <a href="#" class="button round">Find Out More</a>
+                  </div>
+                <% else @piece.nil? %>
+          <div class="row">
+            <div class="small-11 columns">
+              <h4><%= @piece.title %></h4>
+                <% unless @piece.summary =="" %>
+                  <p><%= @piece.summary %></p>
+                <% end %>
+              <a href="<%= piece_path(:title => @piece.title) %>" class="button round">Find Out More</a></li>
+            </div>
+          </div>
+        <% end %>
+          </div>
+        </div>
+      </div>
