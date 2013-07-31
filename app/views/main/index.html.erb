@@ -80,15 +80,25 @@
           <div class="row">
             <!-- Shows -->
             <div class="large-6 columns">
-              <h2>Recent Projects</h2>
-                <div class="row">
-                  <div class="small-1 column">
+              <h2>Recent <%= link_to "Projects", projects_path %></h2>
+                <% if @project.nil? %>
+                  <div class="row">
+                    <div class="small-11 columns">
+                      <p>Andrew has been working hard at Discovership, a new web application for finding experiential-learning opportunities</p>
+                    </div>
+                    <a href="#" class="button round">Find Out More</a>
                   </div>
-                  <div class="small-11 columns">
-                    <p>Andrew has been working hard at Discovership, a new web application for finding experiential-laerning opportunities</p>
+                <% else %>
+                  <div class="row">
+                    <div class="small-11 columns">
+                      <h4><%= @project.title %></h4>
+                        <% unless @project.summary =="" %>
+                          <p><%= @project.summary %></p>
+                        <% end %>
+                      <a href="<%= project_path(:title => @project.title) %>" class="button round">Find Out More</a></li>
+                    </div>
                   </div>
-                  <a href="#" class="button round">Find Out More</a>
-                </div>
+                <% end %>
               </div>
             <div class="large-6 columns">
               <h2>Recent <%= link_to "Music", music_path %></h2>
@@ -101,17 +111,17 @@
                     </div>
                     <a href="#" class="button round">Find Out More</a>
                   </div>
-                <% else @piece.nil? %>
-          <div class="row">
-            <div class="small-11 columns">
-              <h4><%= @piece.title %></h4>
-                <% unless @piece.summary =="" %>
-                  <p><%= @piece.summary %></p>
+                <% else %>
+                  <div class="row">
+                    <div class="small-11 columns">
+                      <h4><%= @piece.title %></h4>
+                        <% unless @piece.summary =="" %>
+                          <p><%= @piece.summary %></p>
+                        <% end %>
+                      <a href="<%= piece_path(:title => @piece.title) %>" class="button round">Find Out More</a></li>
+                    </div>
+                  </div>
                 <% end %>
-              <a href="<%= piece_path(:title => @piece.title) %>" class="button round">Find Out More</a></li>
-            </div>
-          </div>
-        <% end %>
           </div>
         </div>
       </div>

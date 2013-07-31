@@ -1,9 +1,5 @@
 Website::Application.routes.draw do
 
-  get "music/index"
-
-  get "music/music"
-
   root :to => 'main#index'
   match 'resume', :to => "resume#index"
   get '/resume/*title', :to => "resume#tag", as: 'tag'
@@ -18,6 +14,12 @@ Website::Application.routes.draw do
   match '/music/:title', :to => "music#music", as: 'piece'
   resources :music do
     resource :music
+  end
+
+  match 'projects', :to => "project#index"
+  match '/projects/:title', :to => "project#project", as: 'project'
+  resources :project do
+    resource :project
   end
 
   devise_for :admin_users, ActiveAdmin::Devise.config

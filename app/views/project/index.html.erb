@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="large-12 columns">
+
+
+<% if @projects.count > 0 %>
+	<% if @featured_projects.count > 0 %>
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+			<% @featured_projects.each do |project| %>
+				<li><h2><%= project.title %></h2>
+				<% unless project.summary =="" %>
+					<p><%= project.summary %></p>
+				<% end %>
+				<a href="<%= project_path(:title => project.title) %>" class="button round">More</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+		<% (@projects - @featured_projects).each do |project| %>
+			<li><h2><%= project.title %></h2>
+			<% unless project.summary =="" %>
+				<p><%= project.summary %></p>
+			<% end %>
+			<a href="<%= project_path(:title => project.title) %>" class="button round">More</a></li>
+		<% end %>
+	</ul>
+<% end %>
+
+  </div>
+</div>
