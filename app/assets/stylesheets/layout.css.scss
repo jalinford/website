@@ -1,0 +1,23 @@
+
+body { 
+  background: url('faded.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#homepage {
+  background:url(header.jpg) no-repeat center;
+  background-size: 990px 100%;
+  min-height: 705px;
+}
+
+
+#small-homepage {
+  background: url('header.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

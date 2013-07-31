@@ -14,3 +14,40 @@
     </ul>
   </section>
 </nav>
+
+<% if @title == "Home" %>
+  <header class="show-for-medium-up" id="homepage">
+    <div class="row">
+      <div class="small-8 small-centered columns">
+        <br>
+        <h1>Andrew Linford</h1>
+        <h4>His personal webpage - see for yourself!</h4>
+        <br>
+        <%= link_to "See Andrew's Resumes", resume_path, :class=>"round button" %>
+        <br>
+        <div id="watch">
+          <section id="twitter">
+            <a href="http://twitter.com/AndrewLinfordSF">@AndrewLinfordSF</a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="show-for-small" id="small-homepage">
+    <div class="row">
+      <div class="small-9 small-centered columns">
+        <h1>Andrew Linford</h1>
+        <h4>His personal webpage</h4>
+        <br>
+        <%= link_to "See Andrew's Resumes", resume_path, :class=>"round button" %>
+        <div id="watch">
+          <section id="twitter">
+            <a href="http://twitter.com/AndrewLinfordSF">@AndrewLinfordSF</a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </header>
+<hr>
+<% end %>
