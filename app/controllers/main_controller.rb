@@ -14,12 +14,4 @@ class MainController < ApplicationController
       @latest_blog_posts = nil
     end
   end
-  
-  def media
-    @title = "Media"
-    @tags = Tag.where(featured: true).order("title ASC")
-    @featured_slideshows = Slideshow.where(featured: true).order("title ASC")
-    @media = Media.order("priority DESC")
-    @featured_media = Media.where(featured: true).order("priority DESC")
-  end
 end

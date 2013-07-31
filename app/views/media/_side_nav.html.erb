@@ -1,0 +1,17 @@
+<ul class="side-nav">
+  <li class="<%= 'active' if @tag.nil? %>" ><%= link_to "All", media_path %></li>
+  <% if @authored_media_tags.count > 0 %>
+	  <li class="divider"></li>
+	  <li class="subheader">Created by Andrew</li>
+	  <% @authored_media_tags.each do |tag| %>
+			<li class="<%= 'active' if @tag == tag %>"><%= link_to tag.title, tagtype_path(:title => tag.title) %></li>
+		<% end %>
+	<% end %>
+	<% if (@all_media_tags - @authored_media_tags).count > 0 %>
+	  <li class="divider"></li>
+	  <li class="subheader">Other Media</li>
+	  <% (@all_media_tags - @authored_media_tags).each do |tag| %>
+			<li class="<%= 'active' if @tag == tag %>"><%= link_to tag.title, tagtype_path(:title => tag.title) %></li>
+		<% end %>
+	<% end %>
+</ul>

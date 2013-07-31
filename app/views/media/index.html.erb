@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="large-2 columns">
+		<%= render 'side_nav' %>
+  </div>
+  <div class="large-10 columns">
+
+<h1>All media</h1>
+<h5 class="subheader">Feel free to sort media on the left.</h5><hr>
+
+<% if @media.count > 0 %>
+	<% if @featured_media.count > 0 %>
+		<ul class="small-block-grid-1">
+			<% @featured_media.each do |media| %>
+				<li><h4><a href="<%= media.website %>"><%= media.title %></a></h4>
+				<% unless media.summary =="" %>
+					<p><%= media.summary.html_safe %></p>
+				<% end %>
+			<% end %>
+		</ul>
+	<% end %>
+	<ul class="small-block-grid-3 large-block-grid-3">
+		<% (@media - @featured_media).each do |media| %>
+			<li><h5><a href="<%= media.website %>"><%= media.title %></a></h5>
+			<% unless media.summary =="" %>
+				<p><%= media.summary.html_safe %></p>
+			<% end %>
+		<% end %>
+	</ul>
+<% end %>
+
+  </div>
+</div>

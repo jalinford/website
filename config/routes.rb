@@ -22,7 +22,11 @@ Website::Application.routes.draw do
     resource :project
   end
 
-  match 'media', :to => "main#media"
+  match 'media', :to => "media#index"
+  match '/media/:title', :to => "media#tag", as: 'tagtype'
+  resources :media do
+    resource :tag
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
