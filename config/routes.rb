@@ -22,6 +22,8 @@ Website::Application.routes.draw do
     resource :project
   end
 
+  match 'media', :to => "main#media"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
