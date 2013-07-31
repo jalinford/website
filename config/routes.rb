@@ -1,8 +1,10 @@
 Website::Application.routes.draw do
-  
+
   root :to => 'main#index'
   match 'resume', :to => "resume#index"
   get '/resume/*title', :to => "resume#tag", as: 'tag'
+
+  match 'photos', :to => "photos#index"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
