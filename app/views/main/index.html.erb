@@ -1,2 +1,66 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+ <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <!-- Shows -->
+            <div class="large-4 columns">
+              <h2>Latest News</h2>
+                <h3>Current Plans</h3>
+                <div class="row">
+                  <div class="small-1 column">
+                  </div>
+                  <div class="small-11 columns">
+                    <h5 class="subheader">Andrew will be a member of the Coro Fellows in Public Afairs Class of 2013</h5><hr>
+                  </div>
+                </div>
+
+                <h3>Other news</h3>
+                <div class="row">
+                  <div class="small-1 column">
+                  </div>
+                  <div class="small-11 columns">
+                    <h5 class="subheader">Andrew has been working hard on learning Ruby on Rails</h5><hr>
+                  </div>
+                </div>
+              </div>
+            <!-- End Shows -->
+
+
+            <!-- Image -->
+
+
+
+            <!-- End Image -->
+
+
+            <!-- Feed -->
+
+            <div class="large-4 small-12 columns">
+              <% unless @latest_blog_posts.nil? %>
+              <h2><a href="http://andrewlinford.wordpress.com/">Blog</a></h2><hr>
+              <div class="panel">
+                <h5><%= link_to @latest_blog_posts.first.title, @latest_blog_posts.first.link, :target => "_blank" %></h5>
+                <h6 class="subheader">
+	              <%=  truncate(strip_tags(@latest_blog_posts.first.description), :length=>150) %>
+	            </h6>
+	            <h6><%= link_to "Read More", @latest_blog_posts.first.link, :target => "_blank" %></h6>
+                </div>
+                <% if @latest_blog_posts.count > 1 %>
+	              <div class="panel">
+	                <h5><%= link_to @latest_blog_posts[2].title, @latest_blog_posts[2].link, :target => "_blank" %></h5>
+	              </div>
+	              <% @latest_blog_posts[2..3].each do |post| %>
+	              <div class="panel hide-for-small">
+	                <h5><%= link_to post.title, post.link, :target => "_blank" %></h5>
+	              </div>
+	              <% end %>
+              <% end %>
+              <a href="http://andrewlinford.wordpress.com/" class="right">All entries>> </a>
+            <% end %>
+            </div>
+
+            <!-- End Feed -->
+
+          </div>
+        </div>
+      </div>
+
