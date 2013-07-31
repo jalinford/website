@@ -1,4 +1,7 @@
 Website::Application.routes.draw do
+  root :to => 'main#index'
+  match 'resume', :to => "resume#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
