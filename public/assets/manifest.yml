@@ -1,8 +1,10 @@
 ---
 composition.jpg: composition-9c2a717eeed00d24d8c06a500b469075.jpg
 composition/index.jpg: composition-9c2a717eeed00d24d8c06a500b469075.jpg
-faded.jpg: faded-b0d85212ad9a8112a692ba5b6fd6ca85.jpg
-faded/index.jpg: faded-b0d85212ad9a8112a692ba5b6fd6ca85.jpg
+faded.png: faded-831526426eb5d6bd7b5c7ca462b256b1.png
+faded/index.png: faded-831526426eb5d6bd7b5c7ca462b256b1.png
+faded1.jpg: faded1-b0d85212ad9a8112a692ba5b6fd6ca85.jpg
+faded1/index.jpg: faded1-b0d85212ad9a8112a692ba5b6fd6ca85.jpg
 github.png: github-67858d7b3ba69930a655c2010fa54513.png
 github/index.png: github-67858d7b3ba69930a655c2010fa54513.png
 header.jpg: header-987a04c5e0c2228889a7cec471fb0eac.jpg
@@ -11,6 +13,8 @@ linkedin.png: linkedin-cd13cf193caddb3603f529ff606e70fc.png
 linkedin/index.png: linkedin-cd13cf193caddb3603f529ff606e70fc.png
 mail.png: mail-9b7a7ac588657f51937ecbee98b20e57.png
 mail/index.png: mail-9b7a7ac588657f51937ecbee98b20e57.png
+prof.jpg: prof-a6287cd5168d0b7ab317b04732a28639.jpg
+prof/index.jpg: prof-a6287cd5168d0b7ab317b04732a28639.jpg
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 twitter.png: twitter-81710fffe333b83bf0e78d16e537b84a.png
@@ -21,8 +25,8 @@ application.js: application-19c1bdaba5a8551675a9124da6d62b72.js
 application/index.js: application-19c1bdaba5a8551675a9124da6d62b72.js
 active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
-application.css: application-f4956dc6fb610189d2b6dbc8ff745208.css
-application/index.css: application-f4956dc6fb610189d2b6dbc8ff745208.css
+application.css: application-e35ebc464fbeeb9ff19e58408c9afbfd.css
+application/index.css: application-e35ebc464fbeeb9ff19e58408c9afbfd.css
 active_admin/editor/loader.gif: active_admin/editor/loader-7a467f638336806a9b1927ab956c1717.gif
 active_admin/editor/loader/index.gif: active_admin/editor/loader-7a467f638336806a9b1927ab956c1717.gif
 active_admin/editor.js: active_admin/editor-01dea005a3ca880b449292ed6f5014a8.js

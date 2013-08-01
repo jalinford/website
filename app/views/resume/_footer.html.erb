@@ -1,6 +1,13 @@
 <h2><%= footer.title %></h2>
+
+<div class="row">
+    <div class="small-11 small-offset-1 columns">
+
 <ul class="disc">
 	<% all_items(footer.footer_items, @tags_displayed).each do |item| %>
 		<li><%= item.item %></li>
 	<% end %>
 </ul>
+
+   	</div>
+</div>
