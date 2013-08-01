@@ -7,9 +7,9 @@
 <h1><%= @tag.title %></h1>
 
 <% if @tag.media.count > 0 %>
-	<% if @tag.media.where(featured: true).order("priority DESC").count > 0 %>
+	<% if @tag.media.where(featured: true).count > 0 %>
 		<ul class="small-block-grid-1">
-			<% @featured_media.each do |media| %>
+			<% @tag.media.where(featured: true).order("priority DESC").each do |media| %>
 				<li><h4><a href="<%= media.website %>"><%= media.title %></a></h4>
 				<% unless media.summary =="" %>
 					<p><%= media.summary.html_safe %></p></li>
@@ -17,7 +17,7 @@
 			<% end %>
 		</ul>
 	<% end %>
-	<ul class="small-block-grid-2 large-block-grid-3">
+	<ul class="small-block-grid-1 large-block-grid-2">
 		<% (@tag.media - @tag.media.where(featured: true)).each do |media| %>
 			<li><h5><a href="<%= media.website %>"><%= media.title %></a></h5>
 			<% unless media.summary =="" %>
