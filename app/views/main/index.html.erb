@@ -67,7 +67,7 @@
                 </div>
                 <% if @latest_blog_posts.count > 1 %>
 	              <div class="panel">
-	                <h5><%= link_to @latest_blog_posts[2].title, @latest_blog_posts[2].link, :target => "_blank" %></h5>
+	                <h5><%= link_to @latest_blog_posts[1].title, @latest_blog_posts[1].link, :target => "_blank" %></h5>
 	              </div>
 	              <% @latest_blog_posts[2..3].each do |post| %>
 	              <div class="panel hide-for-small">
