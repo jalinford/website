@@ -3,6 +3,7 @@ class Activity < ActiveRecord::Base
   validates_presence_of :organization
   has_many :activity_highlights, :dependent => :destroy
   belongs_to :category
-  accepts_nested_attributes_for :activity_highlights, :category
+  accepts_nested_attributes_for :activity_highlights, :allow_destroy => true
+  accepts_nested_attributes_for :category
   scope :ordered, order("priority DESC")
 end

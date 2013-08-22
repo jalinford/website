@@ -3,6 +3,6 @@ class Footer < ActiveRecord::Base
   validates_presence_of :title, :priority
   validates_uniqueness_of :title
   has_many :footer_items, :dependent => :destroy
-  accepts_nested_attributes_for :footer_items
+  accepts_nested_attributes_for :footer_items, :allow_destroy => true
   scope :ordered, order("priority DESC")
 end

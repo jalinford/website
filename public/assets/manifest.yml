@@ -11,6 +11,10 @@ linkedin.png: linkedin-cd13cf193caddb3603f529ff606e70fc.png
 linkedin/index.png: linkedin-cd13cf193caddb3603f529ff606e70fc.png
 mail.png: mail-9b7a7ac588657f51937ecbee98b20e57.png
 mail/index.png: mail-9b7a7ac588657f51937ecbee98b20e57.png
+poppies-L.JPG: poppies-L-2a34f8d7f15a7aedf9bc875fd904805f.JPG
+poppies-L/index.JPG: poppies-L-2a34f8d7f15a7aedf9bc875fd904805f.JPG
+poppies-S.JPG: poppies-S-61f40b656b3f859f7ee0320b2cbf3b0f.JPG
+poppies-S/index.JPG: poppies-S-61f40b656b3f859f7ee0320b2cbf3b0f.JPG
 prof.jpg: prof-a6287cd5168d0b7ab317b04732a28639.jpg
 prof/index.jpg: prof-a6287cd5168d0b7ab317b04732a28639.jpg
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
@@ -23,8 +27,8 @@ application.js: application-19c1bdaba5a8551675a9124da6d62b72.js
 application/index.js: application-19c1bdaba5a8551675a9124da6d62b72.js
 active_admin.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
 active_admin/index.css: active_admin-f6eab3903eabe26e294bb5e070593cb6.css
-application.css: application-73466e76cddadef5d531f4f7e0998bd8.css
-application/index.css: application-73466e76cddadef5d531f4f7e0998bd8.css
+application.css: application-e35ebc464fbeeb9ff19e58408c9afbfd.css
+application/index.css: application-e35ebc464fbeeb9ff19e58408c9afbfd.css
 active_admin/editor/loader.gif: active_admin/editor/loader-7a467f638336806a9b1927ab956c1717.gif
 active_admin/editor/loader/index.gif: active_admin/editor/loader-7a467f638336806a9b1927ab956c1717.gif
 active_admin/editor.js: active_admin/editor-01dea005a3ca880b449292ed6f5014a8.js

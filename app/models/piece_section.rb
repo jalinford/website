@@ -4,6 +4,6 @@ class PieceSection < ActiveRecord::Base
   mount_uploader :audio_wav, AudioUploader
   mount_uploader :audio_ogg, AudioUploader
   belongs_to :piece
-  accepts_nested_attributes_for :piece
+  accepts_nested_attributes_for :piece, :allow_destroy => true
   scope :ordered, order("priority DESC")
 end

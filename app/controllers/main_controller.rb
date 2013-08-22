@@ -8,6 +8,7 @@ class MainController < ApplicationController
     @piece = Piece.where(featured: true).order("priority DESC").first
     @project = Project.where(featured: true).order("priority DESC").first
     @news = News.order("priority DESC").first(2)
+    @media = Media.where(featured: true).order("priority DESC").first(3)
     begin
       @latest_blog_posts = RSS::Parser.parse(open('http://andrewlinford.wordpress.com/feed/').read, false).items[0...5]
     rescue 
