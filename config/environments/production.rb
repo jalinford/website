@@ -1,5 +1,5 @@
 Website::Application.configure do
-  config.initialize_on_precompile = true
+  config.initialize_on_precompile = false
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -16,6 +16,7 @@ Website::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
+  # CHANGED FOR HEROKU
   config.assets.compile = true
 
   # Generate digests for assets URLs
