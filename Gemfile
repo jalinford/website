@@ -5,8 +5,8 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'activeadmin'
-gem 'active_admin_editor'
+gem 'activeadmin', '0.6.6'
+gem 'active_admin_editor', '1.1.0'
 
 gem "carrierwave"
 gem "mini_magick"
@@ -21,23 +21,23 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '4.3.1'
 end
 
 gem "jquery-rails", "2.3.0"
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.12'
   gem 'rspec-rails', '~> 2.0'
 end
 
 group :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.12'
   gem 'rspec-rails', '~> 2.0'
 end
 
 group :production do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.12'
 end
 
 # To use ActiveModel has_secure_password
