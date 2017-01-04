@@ -24,7 +24,7 @@
                 </div>
                 <% end %>
               <% end %>
-              <a href="http://andrewlinford.wordpress.com/" class="right">All entries>> </a>
+              <a href="https://andrewlinford.wordpress.com/" class="right">All entries>> </a>
             <% end %>
             </div>
 
@@ -37,18 +37,14 @@
                 <% if @news.nil? %>
                   <h3>Current Plans</h3>
                   <div class="row">
-                    <div class="small-1 column">
-                    </div>
-                    <div class="small-11 columns">
+                    <div class="small-12 columns">
                       <h5 class="subheader">Andrew will be a member of the Coro Fellows in Public Afairs Class of 2013</h5><hr>
                     </div>
                   </div>
 
                   <h3>Other news</h3>
                   <div class="row">
-                    <div class="small-1 column">
-                    </div>
-                    <div class="small-11 columns">
+                    <div class="small-12 columns">
                       <h5 class="subheader">Andrew has been working hard on learning Ruby on Rails</h5><hr>
                     </div>
                   </div>
@@ -56,9 +52,7 @@
                   <% @news.each do |news| %>
                     <h3><%= news.title %></h3>
                     <div class="row">
-                      <div class="small-1 column">
-                      </div>
-                      <div class="small-11 columns">
+                      <div class="small-12 columns">
                         <h5 class="subheader"><%= news.summary.html_safe %></h5><hr>
                       </div>
                     </div>

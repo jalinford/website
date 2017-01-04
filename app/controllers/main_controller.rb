@@ -10,7 +10,7 @@ class MainController < ApplicationController
     @news = News.order("priority DESC").first(2)
     @media = Media.where(featured: true).order("priority DESC").first(3)
     begin
-      @latest_blog_posts = RSS::Parser.parse(open('http://andrewlinford.wordpress.com/feed/').read, false).items[0...5]
+      @latest_blog_posts = RSS::Parser.parse(open('https://andrewlinford.wordpress.com/feed/').read, false).items[0...5]
     rescue 
       @latest_blog_posts = nil
     end
